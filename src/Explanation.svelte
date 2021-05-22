@@ -31,7 +31,7 @@ p &lbrace;
   Render a piece of text in a certain typeface, and then test against each
   fallback font. If the width changes (detected via JavaScript), the font is
   probably installed. Cycle through thousands of fonts and you can come up with
-  a pretty good profile of a browser, if you have installed and fonts that are
+  a pretty good profile of a browser, if you have installed any fonts that are
   unusual for your operating system.
 </p>
 <br />
