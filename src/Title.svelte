@@ -40,7 +40,7 @@
   </p>
   <div class="warning">
     <p>psst! testing shows rapidly changing text.</p>
-    <p class="text-red-500 font-bold">please proceed with caution!</p>
+    <p class="text-red-700 font-bold">please proceed with caution!</p>
     {#if !Boolean(agree)}
       <div class="mt-4" transition:fade={{ duration: 400 }}>
         <input class="mr-2" id="agree" type="checkbox" bind:value={agree} />
@@ -61,6 +61,7 @@
       class="text-blue-600 hover:underline hover:text-blue-400 transition-all"
       href="https://github.com/EmeraldSnorlax/fontprint/tree/main"
       target="_blank"
+      rel="noopener"
       >Source Code (GNU AGPL-3.0)</a
     >
   </footer>
