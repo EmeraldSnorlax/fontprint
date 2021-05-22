@@ -46,7 +46,10 @@
       progress = i;
 
       i++;
-      if (i >= max) clearInterval(tick);
+      if (i >= max) {
+        clearInterval(tick);
+        status = "Done!";
+      }
     }, interval);
   });
 </script>
@@ -59,7 +62,11 @@
     <p>{width}px</p>
   </div>
 
-  <span id="fingerprinter" class="left-0 text-9xl p-0 m-0 border-0" {style}>
+  <span
+    id="fingerprinter"
+    class="text-9xl border-0 absolute opacity-5 left-0 top-0"
+    {style}
+  >
     mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmwwwwwwwwwwwwwwwwwwwllllllllllliiiiiiiiii??????!!!!!
   </span>
 
@@ -75,13 +82,13 @@
     <summary class="cursor-pointer font-bold"
       >{matches.length} matches, click to show/hide</summary
     >
-    <div class="m-4 bg-yellow-300 p-2 rounded-md">
+    <div class="m-4 bg-yellow-300 p-2 rounded-md shadow-lg">
       <p>
         psst! You may see fonts here that you aren't aware of. Your browser also
         usually comes with a few fonts, or it might substitute known fonts (eg
         Times New Roman) with a different installed font.
       </p>
-      <br>
+      <br />
       <p>
         However, this is still enough to fingerprint you. More sophisticated
         fingerprinters might include the pixel shift in your fingerprint, to

@@ -20,7 +20,7 @@
   let agree: any = false;
 </script>
 
-<div class="w-full max-w-2xl p-6">
+<div class="md:max-w-2xl max-w-screen-sm p-2">
   <h1 class="text-center text-4xl h-16 align-baseline">
     <span style={font}>Fontprint</span>
   </h1>
