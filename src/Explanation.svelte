@@ -1,7 +1,6 @@
-<script>
-  import { text } from "svelte/internal";
-</script>
 
+<h2 class="text-2xl font-semibold pb-2">How?</h2>
+<hr>
 <p>CSS allows you to set font fallbacks, like so:</p>
 <pre
   class="code">

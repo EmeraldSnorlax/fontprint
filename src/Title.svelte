@@ -24,17 +24,15 @@
   <h1 class="text-center text-4xl h-16 align-baseline">
     <span style={font}>Fontprint</span>
   </h1>
-  <h2 class="text-center text-xl">
+  <p class="text-center text-xl">
     See how your installed fonts can be used to track you
-  </h2>
+  </p>
   <hr class="mt-4" />
   <p class="my-4">
     Typography is everywhere on the web. It's something that you probably don't
     even think about, unless it's pointed out. But it's also something that can
     be used to uniquely identify your browser.
   </p>
-  <Explanation />
-  <br />
   <p>
     This site demonstrates how it can be used to fingerprint you by checking
     against 3000~ fonts. It'll be slower than a real fingerprinting script, as
@@ -42,24 +40,26 @@
   </p>
   <div class="warning">
     <p>
-      psst! this site contains flashing text, similar to the one above, but at a
-      much higher speed.
+      psst! testing may show rapidly moving text and coloured lines.
     </p>
-    <p class="text-red-500 text-center mt-4">please proceed with caution!</p>
+    <p class="text-red-500 font-bold">please proceed with caution!</p>
     {#if !Boolean(agree)}
       <div
-        class="flex items-center justify-center mt-4"
+        class="mt-4"
         transition:fade={{ duration: 400 }}
       >
         <input class="mr-2" id="agree" type="checkbox" bind:value={agree} />
-        <label for="agree">I understand</label>
+        <label for="agree">I understand, let's go!</label>
       </div>
     {/if}
   </div>
 
   {#if Boolean(agree)}
     <div transition:fade={{ duration: 400, delay: 400 }}>
-      <Button text="Go!" />
+      <Button text="Test fingerprint" />
     </div>
   {/if}
+  <br />
+  <Explanation />
+  <br />
 </div>
