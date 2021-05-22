@@ -11,13 +11,13 @@
   let width = 0;
   let status = "";
   let progress = 0;
-  let interval = 20;
+  let interval = 10;
 
   let style: string;
   let sansWidth: number;
-  let serifWidth: number;
-  let monoWidth: number;
   let font = "defaults";
+
+  let matches: string[] = [];
 
   onMount(async () => {
     status = "Getting element...";
@@ -30,45 +30,56 @@
     await sleep(interval);
     sansWidth = fingerprinter.scrollWidth;
 
-    style = "font-family: serif;";
-    await sleep(interval);
-    serifWidth = fingerprinter.scrollWidth;
-
-    style = "font-family: monospace";
-    await sleep(interval);
-    monoWidth = fingerprinter.scrollWidth;
-
     status = "Fingerprinting...";
-    fontList.forEach(async (f, i) => {
-      await sleep(interval * i);
-      font = f;
+
+    let i = 0;
+    let max = fontList.length - 1;
+    let tick = setInterval(async () => {
+      style = `font-family: '${fontList[i]}', sans-serif`;
+      await sleep(interval);
+      width = fingerprinter.scrollWidth;
+      if (width !== sansWidth) {
+        matches = [...matches, fontList[i]];
+      }
+
+      font = fontList[i];
       progress = i;
-    });
+
+      i++;
+      if (i >= max) clearInterval(tick);
+    }, interval);
   });
 </script>
 
 <div>
   <p class="font-sans">Sans-serif width: {sansWidth}px</p>
-  <p class="font-serif">Serif width: {serifWidth}px</p>
-  <p class="font-mono">Mono width: {monoWidth}px</p>
   <br />
   <div class="flex justify-between items-center">
     <p>Comparing: {font}</p>
     <p>{width}px</p>
   </div>
-  <p>{progress} of {fontList.length}</p>
-  <p>
-    {((interval * (fontList.length - progress)) / 1000).toFixed(0)} seconds...
-  </p>
 
   <span id="fingerprinter" class="left-0 text-9xl p-0 m-0 border-0" {style}>
     mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmwwwwwwwwwwwwwwwwwwwllllllllllliiiiiiiiii??????!!!!!
   </span>
-  <p>{status}</p>
-</div>
 
-<progress
-  class="absolute top-0 left-0 w-screen m-0"
-  max={fontList.length}
-  value={progress}
-/>
+
+  <p>{status}</p>
+  <progress class="w-full m-0" max={fontList.length} value={progress} />
+  <p>{progress} of {fontList.length}</p>
+  <p>
+    {((interval * (fontList.length - progress)) / 1000).toFixed(0)} seconds...
+  </p>
+  <br />
+
+  <details>
+    <summary>{matches.length} matches</summary>
+    <ul>
+      {#each matches as match}
+        <li class="list-disc" style="font-family: '{match}', sans-serif">
+          {match}
+        </li>
+      {/each}
+    </ul>
+  </details>
+</div>
