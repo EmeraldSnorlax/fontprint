@@ -13,6 +13,17 @@ module.exports = {
 			"@snowpack/plugin-build-script",
 			{ cmd: "postcss", input: [".css"], output: [".css"] },
 		],
+		[
+      'snowpack-plugin-minify-html',
+      {
+        htmlMinifierOptions: {
+          sortAttributes: true,
+          removeComments: true,
+          html5: true,
+          collapseWhitespace: true,
+        },
+      },
+    ],
 		"@snowpack/plugin-typescript",
 	],
 	packageOptions: {
