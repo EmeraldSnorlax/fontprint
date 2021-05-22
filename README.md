@@ -6,9 +6,8 @@ A demo of how fonts are used to track you online
 
 ## License Info
 
-While this is GNU AGPL-3.0 licensed, I also want to take the time to say that while I can't actually stop you from using this to track actual users (“run the program for any purpose”), it's against the spirit of what this tool is for. Think about the human!
+While this is GNU AGPL-3.0 licensed, I also want to take the time to say: while I can't actually stop you from using this to track actual users (“run the program for any purpose”), it's against the spirit of what this tool is for. Think about the human!
 
-Create a new project with:
 
 ## Available Scripts
 
