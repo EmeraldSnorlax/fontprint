@@ -65,6 +65,7 @@
   <span
     id="fingerprinter"
     class="text-9xl border-0 absolute opacity-5 left-0 top-0"
+    aria-hidden="true"
     {style}
   >
     mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmwwwwwwwwwwwwwwwwwwwllllllllllliiiiiiiiii??????!!!!!
