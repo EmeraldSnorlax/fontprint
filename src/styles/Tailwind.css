@@ -7,5 +7,5 @@
 }
 
 .code {
-  @apply bg-gray-800 text-white p-2 rounded-md my-4
+  @apply bg-gray-800 text-white p-2 rounded-md my-4 font-mono shadow-lg hover:shadow-2xl transition-all
 }
