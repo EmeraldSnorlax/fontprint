@@ -2,6 +2,7 @@
   import { fade } from "svelte/transition";
   import Button from "./components/Button.svelte";
   import Explanation from "./Explanation.svelte";
+  import Fingerprinter from "./Fingerprinter.svelte";
 
   let font = "font-family: sans-serif;";
   let i = 1;
@@ -39,15 +40,10 @@
     it provides visual feedback.
   </p>
   <div class="warning">
-    <p>
-      psst! testing may show rapidly moving text and coloured lines.
-    </p>
+    <p>psst! testing may show rapidly moving text and coloured lines.</p>
     <p class="text-red-500 font-bold">please proceed with caution!</p>
     {#if !Boolean(agree)}
-      <div
-        class="mt-4"
-        transition:fade={{ duration: 400 }}
-      >
+      <div class="mt-4" transition:fade={{ duration: 400 }}>
         <input class="mr-2" id="agree" type="checkbox" bind:value={agree} />
         <label for="agree">I understand, let's go!</label>
       </div>
@@ -55,9 +51,7 @@
   </div>
 
   {#if Boolean(agree)}
-    <div transition:fade={{ duration: 400, delay: 400 }}>
-      <Button text="Test fingerprint" />
-    </div>
+    <Fingerprinter />
   {/if}
   <br />
   <Explanation />
