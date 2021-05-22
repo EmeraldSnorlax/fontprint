@@ -72,9 +72,9 @@
   </p>
   <br />
 
-  <details>
-    <summary>{matches.length} matches</summary>
-    <ul>
+  <details class="bg-gray-100 rounded-lg p-2">
+    <summary class="cursor-pointer font-bold">{matches.length} matches, click to show/hide</summary>
+    <ul class="ml-4">
       {#each matches as match}
         <li class="list-disc" style="font-family: '{match}', sans-serif">
           {match}
