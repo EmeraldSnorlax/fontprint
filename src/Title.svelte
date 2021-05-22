@@ -55,4 +55,14 @@
   <br />
   <Explanation />
   <br />
+  <footer class="text-center">
+    <p>No data is sent to any servers, everything here is done client side.</p>
+    <a
+      class="text-blue-600 hover:underline hover:text-blue-400 transition-all"
+      href="https://github.com/EmeraldSnorlax/fontprint/tree/main"
+      target="_blank"
+      >Source Code (GNU AGPL-3.0)</a
+    >
+  </footer>
+  <br>
 </div>
