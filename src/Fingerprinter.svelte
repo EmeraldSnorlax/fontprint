@@ -63,7 +63,6 @@
     mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmwwwwwwwwwwwwwwwwwwwllllllllllliiiiiiiiii??????!!!!!
   </span>
 
-
   <p>{status}</p>
   <progress class="w-full m-0" max={fontList.length} value={progress} />
   <p>{progress} of {fontList.length}</p>
@@ -73,7 +72,22 @@
   <br />
 
   <details class="bg-gray-100 rounded-lg p-2">
-    <summary class="cursor-pointer font-bold">{matches.length} matches, click to show/hide</summary>
+    <summary class="cursor-pointer font-bold"
+      >{matches.length} matches, click to show/hide</summary
+    >
+    <div class="m-4 bg-yellow-300 p-2 rounded-md">
+      <p>
+        psst! You may see fonts here that you aren't aware of. Your browser also
+        usually comes with a few fonts, or it might substitute known fonts (eg
+        Times New Roman) with a different installed font.
+      </p>
+      <br>
+      <p>
+        However, this is still enough to fingerprint you. More sophisticated
+        fingerprinters might include the pixel shift in your fingerprint, to
+        even guess what font your browser is replacing that font with!
+      </p>
+    </div>
     <ul class="ml-4">
       {#each matches as match}
         <li class="list-disc" style="font-family: '{match}', sans-serif">
