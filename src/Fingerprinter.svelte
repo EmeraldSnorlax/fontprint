@@ -78,7 +78,7 @@
   </p>
   <br />
 
-  <details class="bg-gray-100 rounded-lg p-2">
+  <details class="bg-gray-100 rounded-lg p-2 max-h-96 overflow-y-auto">
     <summary class="cursor-pointer font-bold"
       >{matches.length} matches, click to show/hide</summary
     >

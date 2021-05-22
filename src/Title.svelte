@@ -39,7 +39,7 @@
     it provides visual feedback.
   </p>
   <div class="warning">
-    <p>psst! testing may show rapidly moving text and coloured lines.</p>
+    <p>psst! testing shows rapidly changing text.</p>
     <p class="text-red-500 font-bold">please proceed with caution!</p>
     {#if !Boolean(agree)}
       <div class="mt-4" transition:fade={{ duration: 400 }}>
