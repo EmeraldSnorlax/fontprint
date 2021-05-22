@@ -1,6 +1,7 @@
 <script lang="typescript">
   import { fade } from "svelte/transition";
   import Button from "./components/Button.svelte";
+  import Explanation from "./Explanation.svelte";
 
   let font = "font-family: sans-serif;";
   let i = 1;
@@ -19,13 +20,26 @@
   let agree: any = false;
 </script>
 
-<div class="w-full">
+<div class="w-full max-w-2xl p-6">
   <h1 class="text-center text-4xl h-16 align-baseline">
     <span style={font}>Fontprint</span>
   </h1>
   <h2 class="text-center text-xl">
     See how your installed fonts can be used to track you
   </h2>
+  <hr class="mt-4" />
+  <p class="my-4">
+    Typography is everywhere on the web. It's something that you probably don't
+    even think about, unless it's pointed out. But it's also something that can
+    be used to uniquely identify your browser.
+  </p>
+  <Explanation />
+  <br />
+  <p>
+    This site demonstrates how it can be used to fingerprint you by checking
+    against 3000~ fonts. It'll be slower than a real fingerprinting script, as
+    it provides visual feedback.
+  </p>
   <div class="warning">
     <p>
       psst! this site contains flashing text, similar to the one above, but at a
