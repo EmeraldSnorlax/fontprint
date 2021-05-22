@@ -1,6 +1,5 @@
 <script lang="typescript">
   import { fade } from "svelte/transition";
-  import Button from "./components/Button.svelte";
   import Explanation from "./Explanation.svelte";
   import Fingerprinter from "./Fingerprinter.svelte";
 
