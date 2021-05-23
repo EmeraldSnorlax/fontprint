@@ -57,6 +57,14 @@
   <br />
   <footer class="text-center">
     <p>No data is sent to any servers, everything here is done client side.</p>
+    <p>Cloudflare may set an analytics beacon.</p>
+    <a 
+      class="text-blue-600 hover:underline hover:text-blue-400 transition-all"
+      href="https://www.cloudflare.com/privacypolicy/"
+      target="_blank" 
+      rel="noopener"
+       >Cloudflare's privacy policy</a
+      >
     <a
       class="text-blue-600 hover:underline hover:text-blue-400 transition-all"
       href="https://github.com/EmeraldSnorlax/fontprint/tree/main"
